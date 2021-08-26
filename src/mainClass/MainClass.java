@@ -38,6 +38,7 @@ public class MainClass {
 			case 3: soomin.one(); break;
 			case 4: raina.hi(); break;
 			case 5: five.selectFive();
+			
 					break;
 			}
 		}
