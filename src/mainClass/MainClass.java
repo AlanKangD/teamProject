@@ -24,6 +24,7 @@ public class MainClass {
 
 		Scanner sc = new Scanner(System.in);
 		
+		
 		while(true) {
 			System.out.println("1.강동원 2.김선우 3.박수민 4.김나현 5.김도윤");
 			int num = sc.nextInt();
