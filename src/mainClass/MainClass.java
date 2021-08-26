@@ -1,6 +1,7 @@
 package mainClass;
 
 import java.util.Scanner;
+import soomin.*;
 
 import alanFile.AlanFlie;
 
@@ -14,7 +15,7 @@ public class MainClass {
 		switch(num) {
 		case 1: alan.alanTest(); break;
 		case 2: break;
-		case 3: break;
+		case 3: soomin.soomin_func.one(); break;
 		case 4: break;
 		case 5: break;
 		
