@@ -4,12 +4,14 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MainClass {
+		
 
 		public static void main(String[] args) {
 			Scanner sc = new Scanner(System.in);
 			ArrayList<DTO> list = new ArrayList<DTO>();
 			String id, pw, email, addr;
-			DTO dto = new DTO();
+			String checkid, checkpw;
+			
 			int age;
 			while(true) {
 				System.out.println("회원 가입 웹페이지 입니다");
@@ -17,21 +19,41 @@ public class MainClass {
 				int num = sc.nextInt();
 				switch(num) {
 				case 1: 
-					dto = new DTO();
-					System.out.println("회원가입 페이지입니다.");
+				DTO dto = new DTO();
+				boolean flag = true;
+				if(list.size() != 0) {
+					while(flag) {
+						System.out.println("아이디 : ");
+						id = sc.next();
+						for(int i=0; i<list.size(); i++) {
+							if(id.equals(list.get(i).getId())) {
+								System.out.println("중복된 아이디가 있습니다.");
+								break;
+							}
+							if(!id.equals(list.get(i).getId())){
+							System.out.println("중복된아이디가 없어서 바로 저장합니다. ");
+							dto.setId(id);
+							flag = false;
+							}
+						}
+					}
+				}else {
+					System.out.println("list가 비어있어서 학번을 바로저장합니다.");
 					System.out.println("아이디 : ");
 					id = sc.next(); dto.setId(id);
-					System.out.println("비밀번호 : ");
-					pw = sc.next(); dto.setPw(pw);
-					System.out.println("이메일 : ");		
-					email = sc.next(); dto.setEmail(email);
-					System.out.println("나이 :");
-					age = sc.nextInt(); dto.setAge(age);
-					System.out.println("주소 : ");
-					addr = sc.next(); dto.setAddr(addr);
-					
-					list.add(dto);
-					break;
+				}
+				System.out.println("비밀번호 : ");
+				pw = sc.next(); dto.setPw(pw);
+				System.out.println("이메일 : ");		
+				email = sc.next(); dto.setEmail(email);
+				System.out.println("나이 :");
+				age = sc.nextInt(); dto.setAge(age);
+				System.out.println("주소 : ");
+				addr = sc.next(); dto.setAddr(addr);
+						
+				list.add(dto);
+				break;
+				
 				case 2: 
 					System.out.println("-------회원 전체 정보 목록-------");
 					for(int i=0; i<list.size(); i++) {
@@ -65,13 +87,15 @@ public class MainClass {
 					System.out.println("회원 수정 페이지 입니다. ");
 					System.out.println("수정하실 아이디를 입력하세요!");
 					String f = sc.next();
+
 					for(int i=0; i<list.size(); i++) {
 						
 						if(f.equals(list.get(i).getId())) {
-							System.out.println("변경할 비밀번호를 입력 : "); dto.setPw(sc.next());
-							System.out.println("변경할 이메일를 입력 : "); dto.setEmail(sc.next());
-							System.out.println("변경할 나이를 입력 : "); dto.setAge(sc.nextInt());
-							System.out.println("변경할 주소를 입력 : "); dto.setAddr(sc.next());
+							
+							System.out.println("변경할 비밀번호를 입력 : "); list.get(i).setPw(sc.next());
+							System.out.println("변경할 이메일를 입력 : "); list.get(i).setEmail(sc.next());
+							System.out.println("변경할 나이를 입력 : "); list.get(i).setAge(sc.nextInt());
+							System.out.println("변경할 주소를 입력 : "); list.get(i).setAddr(sc.next());
 
 							break;
 						}
@@ -86,16 +110,10 @@ public class MainClass {
 							list.remove(i);
 						}
 					}
-					break;
-				
-				
-				}
-				
-			}
-			
-		
-		
-		
+					break;			
+				}		
+			}		
 	}
+	
 
 }
