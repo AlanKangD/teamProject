@@ -1,17 +1,16 @@
-package mainClass;
+package loginFrist;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import loginDTO.DTO;
+
 public class MainClass {
-		
 
 		public static void main(String[] args) {
 			Scanner sc = new Scanner(System.in);
 			ArrayList<DTO> list = new ArrayList<DTO>();
-			String id, pw, email, addr;
-			String checkid, checkpw;
-			
+			String id, pw, email, addr;			
 			int age;
 			while(true) {
 				System.out.println("회원 가입 웹페이지 입니다");
@@ -21,6 +20,7 @@ public class MainClass {
 				case 1: 
 				DTO dto = new DTO();
 				boolean flag = true;
+				
 				if(list.size() != 0) {
 					while(flag) {
 						System.out.println("아이디 : ");
@@ -32,7 +32,8 @@ public class MainClass {
 							}
 							if(!id.equals(list.get(i).getId())){
 							System.out.println("중복된아이디가 없어서 바로 저장합니다. ");
-							dto.setId(id);
+							System.out.println("아이디 : ");
+							id = sc.next(); dto.setId(id);
 							flag = false;
 							}
 						}
@@ -110,10 +111,16 @@ public class MainClass {
 							list.remove(i);
 						}
 					}
-					break;			
-				}		
-			}		
+					break;
+				
+				
+				}
+				
+			}
+			
+		
+		
+		
 	}
-	
 
 }

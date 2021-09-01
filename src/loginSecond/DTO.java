@@ -1,4 +1,4 @@
-package mainClass;
+package loginSecond;
 
 public class DTO {
 	private String id;
@@ -38,5 +38,4 @@ public class DTO {
 	public void setAddr(String addr) {
 		this.addr = addr;
 	}
-	
 }
