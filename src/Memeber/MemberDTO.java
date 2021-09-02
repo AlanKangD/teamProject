@@ -1,12 +1,11 @@
-package loginSecond;
+package Memeber;
 
-public class DTO {
+public class MemberDTO {
 	private String id;
 	private String pw;
-	private String email;
-	private int age;
+	private String name;
 	private String addr;
-	
+	private String reply;
 	
 	public String getId() {
 		return id;
@@ -20,17 +19,11 @@ public class DTO {
 	public void setPw(String pw) {
 		this.pw = pw;
 	}
-	public String getEmail() {
-		return email;
+	public String getName() {
+		return name;
 	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public int getAge() {
-		return age;
-	}
-	public void setAge(int age) {
-		this.age = age;
+	public void setName(String name) {
+		this.name = name;
 	}
 	public String getAddr() {
 		return addr;
@@ -38,4 +31,13 @@ public class DTO {
 	public void setAddr(String addr) {
 		this.addr = addr;
 	}
+	public String getReply() {
+		return reply;
+	}
+	public void setReply(String reply) {
+		this.reply = reply;
+	}
+	
+	
+
 }
