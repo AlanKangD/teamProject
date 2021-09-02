@@ -1,12 +1,11 @@
-package member_niyaoh;
+package Memeber;
 
 public class MemberDTO {
-
 	private String id;
 	private String pw;
-	private int birth;
 	private String name;
 	private String addr;
+	private String reply;
 	
 	public String getId() {
 		return id;
@@ -20,12 +19,6 @@ public class MemberDTO {
 	public void setPw(String pw) {
 		this.pw = pw;
 	}
-	public int getBirth() {
-		return birth;
-	}
-	public void setBirth(int birth) {
-		this.birth = birth;
-	}
 	public String getName() {
 		return name;
 	}
@@ -38,7 +31,13 @@ public class MemberDTO {
 	public void setAddr(String addr) {
 		this.addr = addr;
 	}
+	public String getReply() {
+		return reply;
+	}
+	public void setReply(String reply) {
+		this.reply = reply;
+	}
 	
 	
-	
+
 }
