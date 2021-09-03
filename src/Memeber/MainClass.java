@@ -15,19 +15,7 @@ public class MainClass {
 			case 1: break; //도윤
 			case 2: break; //나현
 			case 3: 
-				System.out.println("회원정보를 검색합니다.");
-				System.out.print("검색할 아이디 입력 : ");
-				String id = sc.next();
-				MemberSoominDTO dto = db.searchMem(id);
-				
-				if(dto != null) {
-					System.out.println("아이디 : " + dto.getId());
-					System.out.println("이름 : " + dto.getName());
-					System.out.println("주소 : " + dto.getAddr());
-				}else {
-					System.out.println("해당하는 아이디를 찾지못했습니다.");
-				}
-				
+				db.display();
 				break; //수민
 			case 4: break; //선우
 			case 5: break; //동수

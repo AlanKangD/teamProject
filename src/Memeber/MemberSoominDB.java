@@ -28,5 +28,20 @@ public class MemberSoominDB {
 		}
 		return dto;
 	}
+	
+	public void display() {
+		System.out.println("회원정보를 검색합니다.");
+		System.out.print("검색할 아이디 입력 : ");
+		String id = sc.next();
+		MemberSoominDTO dto = db.searchMem(id);
+		
+		if(dto != null) {
+			System.out.println("아이디 : " + dto.getId());
+			System.out.println("이름 : " + dto.getName());
+			System.out.println("주소 : " + dto.getAddr());
+		}else {
+			System.out.println("해당하는 아이디를 찾지못했습니다.");
+		}
+	}
 
 }
