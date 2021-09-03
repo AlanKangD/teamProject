@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class MainClass {
 	public static void main(String[] args) {
+		MemberNiyaohDAO daoN = new MemberNiyaohDAO();
 		Scanner sc = new Scanner(System.in);
 		MemberAlanDAO dao = new MemberAlanDAO();
 		int num;
@@ -13,7 +14,7 @@ public class MainClass {
 			System.out.println("1. 회원가입 2. 회원전체조회 3. 회원정보검색 4. 회원수정 5. 회원삭제 6. 댓글관리");
 			num = sc.nextInt();
 			switch(num) {
-			case 1: break; //도윤
+			case 1: daoN.register(); break; //도윤
 			case 2: break; //나현
 			case 3: 
 				db.display();
