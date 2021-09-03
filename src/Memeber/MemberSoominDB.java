@@ -33,7 +33,7 @@ public class MemberSoominDB {
 	public void display() {
 		Scanner sc = new Scanner(System.in);
 		MemberSoominDB db = new MemberSoominDB();
-		System.out.println("회원정보를 검색합니다.");
+		System.out.println("회원정보를 검색합니다");
 		System.out.print("검색할 아이디 입력 : ");
 		String id = sc.next();
 		MemberDTO dto = db.searchMem(id);
