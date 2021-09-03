@@ -3,17 +3,17 @@ package Memeber;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class MemberDAO {
+public class MemberNiyaohDAO {
 	
 	private Scanner sc;
-	private MemberDB db;
+	private MemberNiyaohDB db;
 	private ArrayList<MemberDTO> list;
 	private String id, pw, name, addr, reply;
 	private int result;
 	
-	public MemberDAO() {
+	public MemberNiyaohDAO() {
 		sc = new Scanner(System.in);
-		db = new MemberDB();
+		db = new MemberNiyaohDB();
 		list = null;
 		result = 0;
 	}

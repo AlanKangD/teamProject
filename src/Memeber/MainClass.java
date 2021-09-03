@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class MainClass {
 	public static void main(String[] args) {
-		MemberDAO dao = new MemberDAO();
+		MemberNiyaohDAO dao = new MemberNiyaohDAO();
 		Scanner sc = new Scanner(System.in);
 		int num;
 		

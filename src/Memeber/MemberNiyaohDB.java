@@ -4,13 +4,12 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
-public class MemberDB {
-	//본인 DB 설정에 맞게 바꿔서 사용하시면 됩니다!
+public class MemberNiyaohDB {
 	private String url = "jdbc:oracle:thin:@localhost:1521:xe";
 	private String uid = "java1";
 	private String pwd = "1234";
 	
-	public MemberDB() {
+	public MemberNiyaohDB() {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 		} catch (Exception e) {
