@@ -1,4 +1,4 @@
-create table teamMember (
+create table meberdb (
 id varchar2(20),
 pw varchar2(20),
 name varchar2(20),
