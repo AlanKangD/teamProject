@@ -15,7 +15,8 @@ public class MainClass {
 			case 2: break; //나현
 			case 3: break; //수민
 			case 4: break; //선우
-			case 5: break; //동수
+			case 5: MemberDAO mem = new MemberDAO(); 
+					mem.dispDeleteMem(); break; //동수
 			case 6: break; //댓글관리에서는 기능으로 해당 회원이 쓴 댓글만 볼수 있게 만들어 줍니다. 
 			
 			}
