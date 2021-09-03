@@ -9,9 +9,9 @@ import java.util.ArrayList;
 
 public class MemberRainaDB {
 
-	private String url = "jdbc:oracle:thin:@210.221.253.215:1521:xe";
-	private String id = "foracle";
-	private String pwd = "1234";
+	private String url = "jdbc:oracle:thin:localhost:xe";  
+	private String id = "raina";
+	private String pwd = "5598";
 
 	public MemberRainaDB() {
 		try {
