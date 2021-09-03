@@ -6,7 +6,7 @@ public class MainClass {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int num;
-		MemberDAO md = new MemberDAO();
+		MemberRainaDAO md = new MemberRainaDAO();
 		
 		while(true) {
 			System.out.println("1. 회원가입 2. 회원전체조회 3. 회원정보검색 4. 회원수정 5. 회원삭제 6. 댓글관리");

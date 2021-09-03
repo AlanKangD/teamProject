@@ -2,9 +2,9 @@ package Memeber;
 
 import java.util.ArrayList;
 
-public class MemberDAO {
+public class MemberRainaDAO {
 	
-	MemberDB mdb = new MemberDB();
+	MemberRainaDB mdb = new MemberRainaDB();
 	ArrayList<MemberDTO> ar = new ArrayList<MemberDTO>();
 	
 	public void memList() {
