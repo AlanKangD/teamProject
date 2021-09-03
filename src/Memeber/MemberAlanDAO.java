@@ -3,7 +3,7 @@ package Memeber;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class MemberDAO {
+public class MemberAlanDAO {
 	private String id;
 	private String pw;
 	private String name;
@@ -44,7 +44,7 @@ public class MemberDAO {
 	
 	public void allReply() {
 		ArrayList<MemberDTO> list = new ArrayList<MemberDTO>();
-		MemberDB db = new MemberDB();
+		MemberAlanDB db = new MemberAlanDB();
 		list = db.reply();
 		for(int i=0; i<list.size(); i++) {
 			System.out.println("아이디 : " + list.get(i).getId());
@@ -57,7 +57,7 @@ public class MemberDAO {
 	}
 	
 	public void insertReply() {
-		MemberDB db = new MemberDB();
+		MemberAlanDB db = new MemberAlanDB();
 		MemberDTO dto = new MemberDTO();
 		Scanner sc = new Scanner(System.in);
 		int result = 0;
@@ -85,7 +85,7 @@ public class MemberDAO {
 	
 	public void serchReply() {
 		Scanner sc = new Scanner(System.in);
-		MemberDB db = new MemberDB();
+		MemberAlanDB db = new MemberAlanDB();
 		System.out.println("확인 할 댓글 아이디 : ");
 		id = sc.next();
 		MemberDTO dto = db.serch(id);
@@ -98,7 +98,7 @@ public class MemberDAO {
 	}
 	
 	public void updateReply() {
-		MemberDB db = new MemberDB();
+		MemberAlanDB db = new MemberAlanDB();
 		Scanner sc = new Scanner(System.in);
 		System.out.println("수정할 아이디 : ");
 		id = sc.next();
@@ -119,7 +119,7 @@ public class MemberDAO {
 	}
 	
 	public void deleteReply() {
-		MemberDB db = new MemberDB();
+		MemberAlanDB db = new MemberAlanDB();
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("삭제할 아이디 입력 : ");

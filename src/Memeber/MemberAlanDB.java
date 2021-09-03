@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class MemberDB {
+public class MemberAlanDB {
 	private String url = "jdbc:oracle:thin:@localhost:1521:xe";
 	private String id = "java";
 	private String pw = "1234";
