@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class MainClass {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		MemberDAO dao = new MemberDAO();
 		int num;
 		
 		while(true) {
@@ -16,7 +17,9 @@ public class MainClass {
 			case 3: break; //수민
 			case 4: break; //선우
 			case 5: break; //동수
-			case 6: break; //댓글관리에서는 기능으로 해당 회원이 쓴 댓글만 볼수 있게 만들어 줍니다. 
+			case 6: 
+				dao.alan();
+				break; //댓글관리에서는 기능으로 해당 회원이 쓴 댓글만 볼수 있게 만들어 줍니다. 
 			
 			}
 			
