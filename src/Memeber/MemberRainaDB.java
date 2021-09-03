@@ -9,10 +9,10 @@ import java.util.ArrayList;
 
 public class MemberRainaDB {
 
-	private String url = "jdbc:oracle:thin:localhost:xe";  
+	private String url = "jdbc:oracle:thin:@localhost:1521:xe";
 	private String id = "raina";
 	private String pwd = "5598";
-
+	
 	public MemberRainaDB() {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
