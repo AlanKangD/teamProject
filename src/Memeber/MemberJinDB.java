@@ -2,12 +2,12 @@ package Memeber;
 
 import java.sql.*;
 
-public class MemberDB {
-
+public class MemberJinDB {
+	String url = "jdbc:oracle:thin:@210.221.253.215:1521:xe";
+	String id = "foracle";
+	String pw = "1234";
+	
 	public int deleteMem(String userId) {
-		String url = "jdbc:oracle:thin:@210.221.253.215:1521:xe";
-		String id = "foracle";
-		String pw = "1234";
 		int result = 0;
 		String sql = "delete from teamMember where id = '"+userId+"'";
 		try {

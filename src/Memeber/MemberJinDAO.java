@@ -2,13 +2,13 @@ package Memeber;
 
 import java.util.*;
 
-public class MemberDAO {
+public class MemberJinDAO {
 	
 	public void dispDeleteMem() {
 		Scanner scan = new Scanner(System.in);
 		System.out.print("삭제할 id 입력 : ");
 		String id = scan.next();
-		MemberDB md = new MemberDB();
+		MemberJinDB md = new MemberJinDB();
 		int result = md.deleteMem(id);
 		if(result == 1) {
 			System.out.println("삭제가 정상적으로 완료되었습니다.\n");
