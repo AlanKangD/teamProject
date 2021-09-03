@@ -9,8 +9,8 @@ import java.util.ArrayList;
 
 public class MemberAlanDB {
 	private String url = "jdbc:oracle:thin:@localhost:1521:xe";
-	private String id = "java";
-	private String pw = "1234";
+	private String id = "raina";
+	private String pwd = "5598";
 	
 	public void DBClass() {
 		try {
@@ -20,13 +20,13 @@ public class MemberAlanDB {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public ArrayList<MemberDTO> reply() {
 		String sql = "select * from teamMember";
 		ArrayList<MemberDTO> list = new ArrayList<MemberDTO>();
 		
 		try {
-			Connection con = DriverManager.getConnection(url,id,pw);
+			Connection con = DriverManager.getConnection(url,id,pwd);
 			PreparedStatement ps = con.prepareStatement(sql);
 			ResultSet rs = ps.executeQuery();
 			while(rs.next()) {
@@ -50,7 +50,7 @@ public class MemberAlanDB {
 		String sql = "insert into teamMember values(?,?,?,?,?)";
 		int result=0;
 		try {
-			Connection con = DriverManager.getConnection(url,id,pw);
+			Connection con = DriverManager.getConnection(url,id,pwd);
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, userId);
 			ps.setString(2, userPw);
@@ -72,7 +72,7 @@ public class MemberAlanDB {
 		String sql = "select reply from teamMember where id=?";
 		MemberDTO dto = null;
 		try {
-			Connection con = DriverManager.getConnection(url, id, pw);
+			Connection con = DriverManager.getConnection(url, id, pwd);
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, userId);
 			ResultSet rs = ps.executeQuery();
@@ -99,7 +99,7 @@ public class MemberAlanDB {
 		String sql = "update teamMember set pw=?, name=?, addr=?, reply=? where id=?";
 		int result = 0;
 		try {
-			Connection con = DriverManager.getConnection(url,id,pw);
+			Connection con = DriverManager.getConnection(url,id,pwd);
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, userPw);
 			ps.setString(2, userName);
@@ -121,7 +121,7 @@ public class MemberAlanDB {
 		String sql = "delete from teamMember where id=?";
 		int result =0;
 		try {
-			Connection con = DriverManager.getConnection(url,id,pw);
+			Connection con = DriverManager.getConnection(url,id,pwd);
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, userId);
 			result = ps.executeUpdate();

@@ -6,8 +6,8 @@ import java.sql.PreparedStatement;
 
 public class MemberNiyaohDB {
 	private String url = "jdbc:oracle:thin:@localhost:1521:xe";
-	private String uid = "java1";
-	private String pwd = "1234";
+	private String id = "raina";
+	private String pwd = "5598";
 	
 	public MemberNiyaohDB() {
 		try {
@@ -24,7 +24,7 @@ public class MemberNiyaohDB {
 		PreparedStatement pstmt = null;
 		int result = 0;
 		try {
-			conn = DriverManager.getConnection(url, uid, pwd);
+			conn = DriverManager.getConnection(url, this.id, pwd);
 			System.out.println("DB 연결에 성공하였습니다.");
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, id);
