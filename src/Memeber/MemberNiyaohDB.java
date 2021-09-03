@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 
 public class MemberNiyaohDB {
 	private String url = "jdbc:oracle:thin:@localhost:1521:xe";
-	private String id = "java";
+	private String id = "dsjin123";
 	private String pwd = "1234";
 	
 	public MemberNiyaohDB() {

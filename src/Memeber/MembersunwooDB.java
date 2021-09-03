@@ -8,7 +8,7 @@ import java.sql.ResultSet;
 
 public class MembersunwooDB {
 	private String url ="jdbc:oracle:thin:@localhost:1521:xe";
-	private String id = "java";
+	private String id = "dsjin123";
 	private String pwd = "1234";
 	public void DBClass() {
 		try {
