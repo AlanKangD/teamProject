@@ -12,7 +12,6 @@ public class MemberAlanDB {
 	private String id = "java";
 	private String pw = "1234";
 	
-	
 	public void DBClass() {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
