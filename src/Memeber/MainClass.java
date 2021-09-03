@@ -7,6 +7,7 @@ public class MainClass {
 		Scanner sc = new Scanner(System.in);
 		MemberAlanDAO dao = new MemberAlanDAO();
 		int num;
+		MemberSoominDB db = new MemberSoominDB();
 		
 		while(true) {
 			System.out.println("1. 회원가입 2. 회원전체조회 3. 회원정보검색 4. 회원수정 5. 회원삭제 6. 댓글관리");
@@ -14,7 +15,9 @@ public class MainClass {
 			switch(num) {
 			case 1: break; //도윤
 			case 2: break; //나현
-			case 3: break; //수민
+			case 3: 
+				db.display();
+				break; //수민
 			case 4: break; //선우
 			case 5: break; //동수
 			case 6: 
