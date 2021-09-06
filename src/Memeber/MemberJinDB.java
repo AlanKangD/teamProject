@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class MemberJinDB {
 	String url = "jdbc:oracle:thin:@localhost:1521:xe";
-	String id = "dsjin123";
+	String id = "java";
 	String pw = "1234";
 	
 	public MemberJinDB() {

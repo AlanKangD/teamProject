@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class MemberAlanDB {
 	private String url = "jdbc:oracle:thin:@localhost:1521:xe";
-	private String id = "dsjin123";
+	private String id = "java";
 	private String pwd = "1234";
 	
 	public void DBClass() {
@@ -57,15 +57,12 @@ public class MemberAlanDB {
 			ps.setString(3, userName);
 			ps.setString(4, userAddr);
 			ps.setString(5, reply);
-			result = ps.executeUpdate();
-			
-			
+			result = ps.executeUpdate();			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return result;
-		
 	}
 	
 	public MemberDTO serch(String userId) {
@@ -83,7 +80,6 @@ public class MemberAlanDB {
 				dto.setName(rs.getString("name"));
 				dto.setAddr(rs.getString("addr"));
 				dto.setReply(rs.getString("reply"));
-				
 			}
 			
 		} catch (SQLException e) {

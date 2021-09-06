@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class MemberRainaDB {
 
 	private String url = "jdbc:oracle:thin:@localhost:1521:xe";
-	private String id = "dsjin123";
+	private String id = "java";
 	private String pwd = "1234";
 	
 	public MemberRainaDB() {
